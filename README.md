@@ -1,10 +1,10 @@
 # ventas
 api registro de ventas
 
-# Para su funcionamiento 
+#Para su funcionamiento 
  -  Clonar git (https://github.com/jramirez1009/ventas.git)
      mas información ( https://github.com/jramirez1009/ventas )
-# Cambiar las credenciales de base de datos en db.js según su localhost
+#Cambiar las credenciales de base de datos en db.js según su localhost
 
 #Copiar script de la BD enviar por correo e importar en su localhost
 
