@@ -1,6 +1,8 @@
 const express = require('express');
 const app = express();
 
+app.use(express.json());
+
 // Importar controladores
 const productController = require('./controllers/productController');
 const clientController = require('./controllers/clientController');

@@ -29,7 +29,7 @@ const ventaController = {
   },
   
   createVenta: (req, res) => {
-    const ventaData = req.body;
+    const ventaData = req.body;    
     ventaModel.createVenta(ventaData, (error, result) => {
       if (error) {
         console.error('Error al crear la venta:', error);
