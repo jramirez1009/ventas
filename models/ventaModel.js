@@ -3,8 +3,13 @@ const connection = require('../db');
 const ventaModel = {
   
   createVenta: (ventaData, callback) => {    
-    const ventaQuery = 'INSERT INTO venta (fecha, cliente_rutcliente, vendedores_rutvendedor, sucursal_idsucrusal) VALUES (?, ?, ?, ?)';
+    const ventaQuery = 'INSERT INTO venta (idventa,fecha, cliente_rutcliente, vendedores_rutvendedor, sucursal_idsucrusal) VALUES (?, ?, ?, ?, ?)';
+    const fechaActual = new Date();
+    const segundos = fechaActual.getSeconds();
+    const rango = 999999 - 999 + 1;
+    const idventa =  (Math.floor(Math.random() * rango) + 999) + segundos;
     const ventaValues = [
+      idventa,
       ventaData.fecha,
       ventaData.cliente_rutcliente,
       ventaData.vendedor_rutvendedor,
@@ -17,14 +22,16 @@ const ventaModel = {
       }
 
       // Obtener el ID de la venta recién insertada
-      const ventaId = result.insertId;
+     // const ventaId = result.insertId;
+     const ventaId = idventa;
 
      // Insertar los detalles de la venta en la tabla detalleventa
       const detalles = ventaData.detalles;
-      const detalleQuery = 'INSERT INTO detalleventa (cantidad, preciounitario, venta_idventa, producto_idproducto) VALUES (?, ?, ?, ?)';
+      const detalleQuery = 'INSERT INTO detalleventa (iddetalleventa,cantidad, preciounitario, venta_idventa, producto_idproducto) VALUES (?, ?, ?, ?, ?)';
       
       detalles.forEach(detalle => {
         const detalleValues = [
+          ventaId,
           detalle.cantidad,
           detalle.precioUnitario,
           ventaId, // Utilizamos el ID de la venta recién insertada

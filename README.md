@@ -26,4 +26,4 @@ api registro de ventas
 
       Esto se debe enviar en formato Json, ver Documentación. 
 
-      https://documenter.getpostman.com/view/5936058/2s9XxsTvax#325814a8-43f8-452f-9fbb-d83878733d7c
+      https://documenter.getpostman.com/view/5936058/2s9XxsTvax
