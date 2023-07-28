@@ -70,7 +70,11 @@ JOIN producto p ON dv.producto_idproducto = p.idproducto
     connection.query(query, [startDate, endDate], callback);
   },
 
-  // Otras funciones para CRUD...
+  searchVentaById: (idventa, callback) => {
+    const query = 'SELECT * FROM venta WHERE idventa = ?';
+     connection.query(query, [idventa], callback);
+    //connection.query(query, [`%${proveedorId}%`], callback);
+  },
 };
 
 module.exports = ventaModel;

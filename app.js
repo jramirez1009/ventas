@@ -28,6 +28,7 @@ app.get('/vendedor', vendedorController.getAllVendedors);
 app.get('/vendedor/search/:searchTerm', vendedorController.searchVendedors);
 
 app.get('/venta/search/:startDate/:endDate', ventaController.getDetallesVenta);
+app.get('/venta/id/:idventa', ventaController.getTotalVenta);
 app.post('/venta', ventaController.createVenta);
 
 
