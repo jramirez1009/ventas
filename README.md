@@ -4,7 +4,7 @@ api registro de ventas
 #Para su funcionamiento 
 
 1. Crear una base de datos en su entorno local
-2. Importar el script.sql (enviado por correo) 
+2. Importar el script.sql (solicitarlo) 
 3. Abrir una terminal en la ruta donde se va a crear el proyecto
 4. Dirigirse a github y clonar el repositorio (https://github.com/jramirez1009/ventas.git)
 5. Arbir el proyecto con un editor (normalmente se usa visual studio code) desde la terminal usando "code ."
